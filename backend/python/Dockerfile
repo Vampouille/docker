@@ -1,4 +1,5 @@
-FROM python:3-slim AS builder
+ARG BASE_TAG=3-slim
+FROM python:${BASE_TAG} AS builder
 COPY api.py /usr/src/app/
 COPY requirements.txt /usr/src/app/
 WORKDIR /usr/src/app/
